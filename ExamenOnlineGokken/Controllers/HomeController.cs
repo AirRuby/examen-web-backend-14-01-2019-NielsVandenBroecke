@@ -35,17 +35,25 @@ namespace ExamenOnlineGokken.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        [Route("/ByLeague")]
         [Route("Home/FindByLeague/{LeagueId}")]
         public IActionResult FindByLeague(int LeagueId)
         {
             HomeIndexVM homeIndexVM = new HomeIndexVM();
 
-            homeIndexVM.Title = "Games uit geselecteerde league";
+            if (LeagueId == null)
+            {
+                homeIndexVM.Title = "Selecteer een League";
+            }
+            else
+            {
+                homeIndexVM.Title = "Games uit geselecteerde league";
 
-            homeIndexVM.Games = _gambleDbContext.Games.Where(g => g.LeagueId == LeagueId)
-                .Include(g => g.Bets)
-                .ThenInclude(b => b.User).OrderBy(g => g.DateOfGame)
-                .ToList();
+                homeIndexVM.Games = _gambleDbContext.Games.Where(g => g.LeagueId == LeagueId)
+                    .Include(g => g.Bets)
+                    .ThenInclude(b => b.User).OrderBy(g => g.DateOfGame)
+                    .ToList();
+            }
 
             return View(homeIndexVM);
         }
