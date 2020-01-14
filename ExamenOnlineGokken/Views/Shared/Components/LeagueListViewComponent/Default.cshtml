@@ -1,0 +1,14 @@
+﻿@model LeagueListViewComponentVM
+
+@{
+    ViewData["Title"] = "Default";
+}
+
+@foreach (var league in Model.Leagues)
+{
+    <div class="list-group">
+        <a class="list-group-item list-group-item-action " href="/ByLeague/@league.Id">@league.Name</a>
+    </div>
+}
+
+
