@@ -27,23 +27,23 @@ namespace ExamenOnlineGokken.Controllers
             
             return View();
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Route("Home/Search")]
-        public async Task<IActionResult> AddGame()
-        {
-            //check the model
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //[Route("Home/Search")]
+        //public async Task<IActionResult> AddGame()
+        //{
+        //    //check the model
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View();
+        //    }
 
-            //create actor
-            var newGame = new 
-            {
+        //    //create actor
+        //    var newGame = new 
+        //    {
                 
-            };
+        //    };
             
-        }
+        //}
     }
 }
