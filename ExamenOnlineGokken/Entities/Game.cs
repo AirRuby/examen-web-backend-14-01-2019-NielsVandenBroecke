@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ExamenOnlineGokken.Entities
 {
@@ -12,5 +13,7 @@ namespace ExamenOnlineGokken.Entities
         public string AwayTeam { get; set; }
         public DateTime DateOfGame { get; set; }
         public ICollection<Bet> Bets { get; set; }
+        [ForeignKey("League")]
+        public int LeagueIdFK { get; set; }
     }
 }

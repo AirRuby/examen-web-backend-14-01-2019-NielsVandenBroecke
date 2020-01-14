@@ -4,14 +4,16 @@ using ExamenOnlineGokken.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ExamenOnlineGokken.Migrations
 {
     [DbContext(typeof(GambleDbContext))]
-    partial class GambleDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200114124501_AddedLeague")]
+    partial class AddedLeague
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -117,13 +119,9 @@ namespace ExamenOnlineGokken.Migrations
 
                     b.Property<string>("Hometeam");
 
-                    b.Property<long?>("LeagueId");
-
                     b.Property<int>("LeagueIdFK");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("LeagueId");
 
                     b.ToTable("Games");
 
@@ -258,21 +256,6 @@ namespace ExamenOnlineGokken.Migrations
                         });
                 });
 
-            modelBuilder.Entity("ExamenOnlineGokken.Entities.League", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(200);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("League");
-                });
-
             modelBuilder.Entity("ExamenOnlineGokken.Entities.User", b =>
                 {
                     b.Property<long>("Id")
@@ -331,13 +314,6 @@ namespace ExamenOnlineGokken.Migrations
                         .WithMany("Bets")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("ExamenOnlineGokken.Entities.Game", b =>
-                {
-                    b.HasOne("ExamenOnlineGokken.Entities.League")
-                        .WithMany("Games")
-                        .HasForeignKey("LeagueId");
                 });
 #pragma warning restore 612, 618
         }

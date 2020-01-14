@@ -13,6 +13,7 @@ namespace ExamenOnlineGokken.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Game> Games { get; set; }
         public DbSet<Bet> Bets { get; set; }
+        public DbSet<League> League { get; set; }
 
         public GambleDbContext(DbContextOptions<GambleDbContext> options):base(options){}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
