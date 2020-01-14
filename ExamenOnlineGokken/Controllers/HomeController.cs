@@ -42,9 +42,10 @@ namespace ExamenOnlineGokken.Controllers
 
             homeIndexVM.Title = "Games uit geselecteerde league";
 
-            var GamesWithLeagueId = _gambleDbContext.Games.Where(g => g.LeagueId == LeagueId).ToList();
-
-            homeIndexVM.Games = GamesWithLeagueId;
+            homeIndexVM.Games = _gambleDbContext.Games.Where(g => g.LeagueId == LeagueId)
+                .Include(g => g.Bets)
+                .ThenInclude(b => b.User).OrderBy(g => g.DateOfGame)
+                .ToList();
 
             return View(homeIndexVM);
         }

@@ -53,7 +53,6 @@ namespace ExamenOnlineGokken
             }
 
             app.UseHttpsRedirection();
-            //app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseStaticFiles();
 
