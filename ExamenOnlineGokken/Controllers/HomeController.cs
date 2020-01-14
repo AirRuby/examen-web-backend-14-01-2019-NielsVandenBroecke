@@ -38,10 +38,15 @@ namespace ExamenOnlineGokken.Controllers
         [Route("Home/FindByLeague/{LeagueId}")]
         public IActionResult FindByLeague(int LeagueId)
         {
+            HomeIndexVM homeIndexVM = new HomeIndexVM();
+
+            homeIndexVM.Title = "Games uit geselecteerde league";
+
             var GamesWithLeagueId = _gambleDbContext.Games.Where(g => g.LeagueId == LeagueId).ToList();
 
+            homeIndexVM.Games = GamesWithLeagueId;
 
-            return View();
+            return View(homeIndexVM);
         }
     }
 }
