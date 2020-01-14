@@ -13,7 +13,7 @@ namespace ExamenOnlineGokken.Entities
         public string AwayTeam { get; set; }
         public DateTime DateOfGame { get; set; }
         public ICollection<Bet> Bets { get; set; }
-        [ForeignKey("League")]
-        public int LeagueIdFK { get; set; }
+        public League League { get; set; }
+        public long LeagueId { get; set; }
     }
 }

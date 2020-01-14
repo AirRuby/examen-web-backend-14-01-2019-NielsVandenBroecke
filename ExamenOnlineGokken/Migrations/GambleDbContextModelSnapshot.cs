@@ -117,9 +117,7 @@ namespace ExamenOnlineGokken.Migrations
 
                     b.Property<string>("Hometeam");
 
-                    b.Property<long?>("LeagueId");
-
-                    b.Property<int>("LeagueIdFK");
+                    b.Property<long>("LeagueId");
 
                     b.HasKey("Id");
 
@@ -134,7 +132,7 @@ namespace ExamenOnlineGokken.Migrations
                             AwayTeam = "Cagliari",
                             DateOfGame = new DateTime(2020, 1, 20, 15, 30, 0, 0, DateTimeKind.Unspecified),
                             Hometeam = "Juventus",
-                            LeagueIdFK = 0
+                            LeagueId = 1L
                         },
                         new
                         {
@@ -142,7 +140,7 @@ namespace ExamenOnlineGokken.Migrations
                             AwayTeam = "Pescara",
                             DateOfGame = new DateTime(2020, 1, 21, 18, 30, 0, 0, DateTimeKind.Unspecified),
                             Hometeam = "Inter",
-                            LeagueIdFK = 0
+                            LeagueId = 1L
                         },
                         new
                         {
@@ -150,7 +148,7 @@ namespace ExamenOnlineGokken.Migrations
                             AwayTeam = "Cagliari",
                             DateOfGame = new DateTime(2020, 1, 20, 15, 30, 0, 0, DateTimeKind.Unspecified),
                             Hometeam = "Napoli",
-                            LeagueIdFK = 0
+                            LeagueId = 1L
                         },
                         new
                         {
@@ -158,7 +156,7 @@ namespace ExamenOnlineGokken.Migrations
                             AwayTeam = "Bologna",
                             DateOfGame = new DateTime(2020, 1, 20, 20, 30, 0, 0, DateTimeKind.Unspecified),
                             Hometeam = "Milan",
-                            LeagueIdFK = 0
+                            LeagueId = 1L
                         },
                         new
                         {
@@ -166,7 +164,7 @@ namespace ExamenOnlineGokken.Migrations
                             AwayTeam = "Cercle Brugge",
                             DateOfGame = new DateTime(2020, 1, 23, 13, 30, 0, 0, DateTimeKind.Unspecified),
                             Hometeam = "Club Brugge",
-                            LeagueIdFK = 0
+                            LeagueId = 2L
                         },
                         new
                         {
@@ -174,7 +172,7 @@ namespace ExamenOnlineGokken.Migrations
                             AwayTeam = "AA Gent",
                             DateOfGame = new DateTime(2020, 1, 23, 18, 30, 0, 0, DateTimeKind.Unspecified),
                             Hometeam = "KRC Genk",
-                            LeagueIdFK = 0
+                            LeagueId = 2L
                         },
                         new
                         {
@@ -182,7 +180,7 @@ namespace ExamenOnlineGokken.Migrations
                             AwayTeam = "FC Antwerp",
                             DateOfGame = new DateTime(2020, 1, 23, 20, 30, 0, 0, DateTimeKind.Unspecified),
                             Hometeam = "Standard",
-                            LeagueIdFK = 0
+                            LeagueId = 2L
                         },
                         new
                         {
@@ -190,7 +188,7 @@ namespace ExamenOnlineGokken.Migrations
                             AwayTeam = "Cercle Brugge",
                             DateOfGame = new DateTime(2020, 1, 23, 13, 30, 0, 0, DateTimeKind.Unspecified),
                             Hometeam = "Club Brugge",
-                            LeagueIdFK = 0
+                            LeagueId = 2L
                         },
                         new
                         {
@@ -198,7 +196,7 @@ namespace ExamenOnlineGokken.Migrations
                             AwayTeam = "Liverpool",
                             DateOfGame = new DateTime(2020, 2, 18, 20, 30, 0, 0, DateTimeKind.Unspecified),
                             Hometeam = "Atletico Madrid",
-                            LeagueIdFK = 0
+                            LeagueId = 3L
                         },
                         new
                         {
@@ -206,7 +204,7 @@ namespace ExamenOnlineGokken.Migrations
                             AwayTeam = "Valencia",
                             DateOfGame = new DateTime(2020, 2, 19, 20, 30, 0, 0, DateTimeKind.Unspecified),
                             Hometeam = "Atalanta",
-                            LeagueIdFK = 0
+                            LeagueId = 3L
                         },
                         new
                         {
@@ -214,7 +212,7 @@ namespace ExamenOnlineGokken.Migrations
                             AwayTeam = "Bayern",
                             DateOfGame = new DateTime(2020, 2, 19, 20, 30, 0, 0, DateTimeKind.Unspecified),
                             Hometeam = "Chelsea",
-                            LeagueIdFK = 0
+                            LeagueId = 3L
                         },
                         new
                         {
@@ -222,7 +220,7 @@ namespace ExamenOnlineGokken.Migrations
                             AwayTeam = "Barcelona",
                             DateOfGame = new DateTime(2020, 2, 25, 21, 0, 0, 0, DateTimeKind.Unspecified),
                             Hometeam = "Napoli",
-                            LeagueIdFK = 0
+                            LeagueId = 3L
                         },
                         new
                         {
@@ -230,7 +228,7 @@ namespace ExamenOnlineGokken.Migrations
                             AwayTeam = "Inter Milan",
                             DateOfGame = new DateTime(2020, 2, 20, 20, 30, 0, 0, DateTimeKind.Unspecified),
                             Hometeam = "Ludogorets",
-                            LeagueIdFK = 0
+                            LeagueId = 4L
                         },
                         new
                         {
@@ -238,7 +236,7 @@ namespace ExamenOnlineGokken.Migrations
                             AwayTeam = "Man United",
                             DateOfGame = new DateTime(2020, 2, 20, 21, 30, 0, 0, DateTimeKind.Unspecified),
                             Hometeam = "Club Brugge",
-                            LeagueIdFK = 0
+                            LeagueId = 4L
                         },
                         new
                         {
@@ -246,7 +244,7 @@ namespace ExamenOnlineGokken.Migrations
                             AwayTeam = "AS Roma",
                             DateOfGame = new DateTime(2020, 2, 27, 20, 30, 0, 0, DateTimeKind.Unspecified),
                             Hometeam = "AA Gent",
-                            LeagueIdFK = 0
+                            LeagueId = 4L
                         },
                         new
                         {
@@ -254,7 +252,7 @@ namespace ExamenOnlineGokken.Migrations
                             AwayTeam = "Arsenal",
                             DateOfGame = new DateTime(2020, 2, 21, 20, 30, 0, 0, DateTimeKind.Unspecified),
                             Hometeam = "Olympiacos",
-                            LeagueIdFK = 0
+                            LeagueId = 4L
                         });
                 });
 
@@ -271,6 +269,28 @@ namespace ExamenOnlineGokken.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("League");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            Name = "serie A"
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            Name = "UEFA Champions League"
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            Name = "UEFA Europa League"
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            Name = "Jupiler Pro League"
+                        });
                 });
 
             modelBuilder.Entity("ExamenOnlineGokken.Entities.User", b =>
@@ -335,9 +355,10 @@ namespace ExamenOnlineGokken.Migrations
 
             modelBuilder.Entity("ExamenOnlineGokken.Entities.Game", b =>
                 {
-                    b.HasOne("ExamenOnlineGokken.Entities.League")
+                    b.HasOne("ExamenOnlineGokken.Entities.League", "League")
                         .WithMany("Games")
-                        .HasForeignKey("LeagueId");
+                        .HasForeignKey("LeagueId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

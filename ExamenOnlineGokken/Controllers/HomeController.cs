@@ -34,5 +34,12 @@ namespace ExamenOnlineGokken.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        [Route("Home/FindByLeague/{LeagueId}")]
+        public IActionResult FindByLeague(int LeagueId)
+        {
+
+            return View();
+        }
     }
 }
